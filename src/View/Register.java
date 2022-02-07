@@ -81,6 +81,7 @@ public class Register extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sideBar.setBackground(new java.awt.Color(0, 121, 107));
 
@@ -156,6 +157,8 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(btn_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        getContentPane().add(sideBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 469));
+
         headingBar.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel12.setIcon(new javax.swing.ImageIcon("D:\\2. File Kampus\\SEMESTER 3\\PEMOGRAMAN BERBASIS OBJEK\\Projek Inventory\\inventory_pbo\\Inventory_pbo\\src\\View\\Icon\\LOGIN2.png")); // NOI18N
@@ -183,6 +186,8 @@ public class Register extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
+
+        getContentPane().add(headingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 0, 860, -1));
 
         centerPanel.setBackground(new java.awt.Color(0, 86, 76));
 
@@ -220,6 +225,7 @@ public class Register extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Ulangi Password");
 
+        cb_hakses.setBackground(new java.awt.Color(0, 86, 76));
         cb_hakses.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Kepala Gudang", " " }));
         cb_hakses.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -235,6 +241,12 @@ public class Register extends javax.swing.JFrame {
                 btn_cancelActionPerformed(evt);
             }
         });
+
+        tx_nik.setBackground(new java.awt.Color(0, 86, 76));
+
+        tx_nama.setBackground(new java.awt.Color(0, 86, 76));
+
+        tx_username.setBackground(new java.awt.Color(0, 86, 76));
 
         javax.swing.GroupLayout centerPanelLayout = new javax.swing.GroupLayout(centerPanel);
         centerPanel.setLayout(centerPanelLayout);
@@ -307,25 +319,7 @@ public class Register extends javax.swing.JFrame {
                 .addGap(72, 72, 72))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(sideBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(headingBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(centerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(headingBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(centerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(centerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 63, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
